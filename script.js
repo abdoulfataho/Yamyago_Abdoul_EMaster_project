@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const courseGrid = document.getElementById('courseGrid');
     courses.forEach(course => {
         const courseCard = document.createElement('div');
-        courseCard.classList.add('course-card');
+        courseCard.className = 'bg-white p-6 rounded-lg shadow-md';
         courseCard.innerHTML = `
-            <h3>${course.title}</h3>
-            <p>${course.description}</p>
-            <button>Enroll Now</button>
+            <h3 class="text-xl font-bold mb-2">${course.title}</h3>
+            <p class="mb-4">${course.description}</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">Enroll Now</button>
         `;
         courseGrid.appendChild(courseCard);
     });
